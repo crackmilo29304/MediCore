@@ -14,7 +14,7 @@ import jakarta.transaction.Transactional;
 @Repository
 public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
     public Employee findByDocumentNumber(String documentNumber);
-    public List<Employee> findByLastName(); 
+    public List<Employee> findByLastName(String lastName); 
     @Modifying
     @Transactional
     public int deleteByDocumentNumber(String documentNumber);

@@ -1,10 +1,15 @@
 package com.medicore.app.models;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -25,6 +30,8 @@ public class Patient extends Person {
     @Column(name = "blood_type", nullable = false)
     private String bloodType;
     
+    @OneToMany(mappedBy= "patient", cascade = CascadeType.ALL )
+    private List<Pqrs> pqrsList = new ArrayList<>();
 /* 
    public Patient(PatientRegistrationDTO dto) {
         super(dto.lastname(), dto.birthDate(), dto.name(), dto.documentNumber());
