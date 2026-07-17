@@ -8,5 +8,5 @@ import com.medicore.app.models.Medicine;
 
 @Repository
 public interface MedicineRepository extends JpaRepository<Medicine, Integer>{
-    public Medicine findByMedicineName(String medicineName);
+    Medicine findByMedicineName(String medicineName);
 }

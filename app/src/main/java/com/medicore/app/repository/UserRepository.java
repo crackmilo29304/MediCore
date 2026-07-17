@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 import com.medicore.app.models.User;
 @Repository
 public interface UserRepository extends JpaRepository<User, Integer> {
-    public User findByDocumentNumberAndPassword(String documentNumber, String password);
+    User findByDocumentNumberAndPassword(String documentNumber, String password);
 }

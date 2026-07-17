@@ -9,6 +9,6 @@ import com.medicore.app.models.Prescription;
 
 @Repository
 public interface PrescriptionRepository extends JpaRepository<Prescription, Integer>{
-    public List<Prescription> findByAppointment_Id(int appointmentId);
+    List<Prescription> findByAppointment_Id(int appointmentId);
     
 }

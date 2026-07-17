@@ -13,11 +13,11 @@ import jakarta.transaction.Transactional;
 
 @Repository
 public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
-    public Employee findByDocumentNumber(String documentNumber);
-    public List<Employee> findByLastName(String lastName); 
+    Employee findByDocumentNumber(String documentNumber);
+    List<Employee> findByLastName(String lastName); 
     @Modifying
     @Transactional
-    public int deleteByDocumentNumber(String documentNumber);
+    int deleteByDocumentNumber(String documentNumber);
 
 
 }
