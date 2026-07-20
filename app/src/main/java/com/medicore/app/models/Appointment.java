@@ -40,6 +40,10 @@ public class Appointment {
 
     @Column(name="is_available")
     private boolean isAvailable;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="appointments_types")
+    private ApptmType apptmType;
     
 
    
