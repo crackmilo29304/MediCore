@@ -28,7 +28,7 @@ public class Appointment {
     private int id; // database id
     
     @ManyToOne(fetch = FetchType.LAZY) 
-    @JoinColumn(name = "patient_id", nullable = false) //FK
+    @JoinColumn(name = "patient_id") //FK
     private Patient patient;
     
     @ManyToOne(fetch = FetchType.LAZY)
@@ -42,7 +42,7 @@ public class Appointment {
     private boolean isAvailable;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="appointments_types")
+    @JoinColumn(name="type")
     private ApptmType apptmType;
     
 

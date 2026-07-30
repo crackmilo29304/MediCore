@@ -14,6 +14,6 @@ public interface AppointmentRepository extends JpaRepository<Appointment, Intege
     boolean existsByDateTime(OffsetDateTime dateTime);
     List<Appointment> findByPatient_DocumentNumber(String documentNumber);
     List<Appointment> findByDateTimeAndPatient_DocumentNumber(OffsetDateTime dateTime, String documentNumber);
-    List<Appointment> findByIsAvailable(boolean available);
+    Appointment findByIsAvailableAndDateTime(boolean available, OffsetDateTime dateTime);
     
 }
