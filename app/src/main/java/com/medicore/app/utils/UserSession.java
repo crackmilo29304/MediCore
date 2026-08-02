@@ -4,11 +4,11 @@ public class UserSession {
     private static String selectedRole; // "ADMIN", "PACIENTE", "MEDICO"
     private static String documentNumber;
     
-    public static void setRol(String role) {
+    public static void setRole(String role) {
         selectedRole = role;
     }
 
-    public static String getRol() {
+    public static String getRole() {
         return selectedRole;
     }
 
