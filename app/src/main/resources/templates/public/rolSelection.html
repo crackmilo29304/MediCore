@@ -114,12 +114,13 @@
   <main class="container">
     <h1>Medicore</h1>
     <p>Selecciona tu tipo de usuario para ingresar</p>
-
-    <div class="button-group">
-      <a class="btn btn-paciente" th:href="@{/login}">Paciente</a>
-      <a class="btn btn-doctor" th:href="@{/login}">Doctor</a>
-      <a class="btn btn-admin" th:href="@{/login}">Administrador</a>
-    </div>
+    <form th:action="@{/set-role}" method="post">
+        <div class="button-group">
+            <button class="btn btn-paciente" name= "role" value= "PACIENTE" type="submit">Paciente</button>
+            <button class="btn btn-doctor" name= "role" value= "DOCTOR" type="submit">Doctor</button>
+            <button class="btn btn-admin" name= "role" value= "ADMIN" type="submit">Administrador</button>
+        </div>
+    </form>
   </main>
 
 </html>
