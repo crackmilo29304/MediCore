@@ -15,7 +15,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" th:href="@{/admin}">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Admin</span></a>
             </li>
@@ -30,7 +30,7 @@
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link" href="charts.html">
+                <a class="nav-link" th:href="@{/admin/registerEmployees}">
                     <i class="bi bi-briefcase"></i>
                     <span>Registrar empleados</span>
                 </a>
@@ -39,7 +39,7 @@
 
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link" href="charts.html">
+                <a class="nav-link" th:href="@{/admin/searchEmployees}">
                     <i class="bi bi-search"></i>
                     <span>Buscar empleados</span>
                 </a>
@@ -48,8 +48,7 @@
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link" href="charts.html">
-                    
+                <a class="nav-link" th:href="@{/admin/medicineStock}">
                     <i class="bi bi-backpack2-fill"></i>
                     <span>Stock medicamentos</span>
                 </a>
@@ -58,7 +57,7 @@
 
             <!-- Nav Item - Charts -->
             <li class="nav-item">
-                <a class="nav-link" href="charts.html">
+                <a class="nav-link" th:href="@{/admin/deleteUsers}">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Eliminar usuarios</span></a>
             </li>
